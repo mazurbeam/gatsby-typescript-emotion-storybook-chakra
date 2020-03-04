@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import {
-  injectIntl,
-  FormattedMessage,
-  InjectedIntlProps,
-} from 'gatsby-plugin-intl';
 
 import { Layout } from '~/components/Layout';
 import { SEO } from '~/components/SEO';
@@ -42,10 +37,10 @@ const Logo = styled.img`
   margin: 0;
 `;
 
-const Index: React.FC<InjectedIntlProps> = ({ intl }) => {
+const Index: React.FC = () => {
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'homepage.title' })} />
+      <SEO title={'Mazurbeam'} />
       <Container>
         <Card>
           <div
@@ -73,10 +68,10 @@ const Index: React.FC<InjectedIntlProps> = ({ intl }) => {
               padding: 30px 20px 20px;
             `}
           >
-            <FormattedMessage id="greeting" />
+            {/*<FormattedMessage id="greeting" />*/}
           </div>
           <a
-            href="https://github.com/duncanleung/gatsby-typescript-emotion-storybook"
+            href="https://github.com/mazurbeam/portfolio"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -101,4 +96,4 @@ const Index: React.FC<InjectedIntlProps> = ({ intl }) => {
   );
 };
 
-export default injectIntl(Index);
+export default Index;

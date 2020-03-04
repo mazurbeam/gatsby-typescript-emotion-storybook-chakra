@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormattedMessage } from 'gatsby-plugin-intl';
+// import { FormattedMessage } from 'gatsby-plugin-intl';
 
 import Button from './Button';
 
@@ -10,7 +10,7 @@ export default {
 
 export const Link = () => (
   <Button tag="link" to="test" isLoading>
-    <FormattedMessage id="auth.login" />
+    {/*<FormattedMessage id="auth.login" />*/}
   </Button>
 );
 

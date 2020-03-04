@@ -2,9 +2,9 @@ require('dotenv').config({
   path: '.env',
 });
 
-const supportedLanguages = require('./src/utils/i18n/supportedLanguages');
+// const supportedLanguages = require('./src/utils/i18n/supportedLanguages');
 
-const languages = supportedLanguages.map(language => language.languageTag);
+// const languages = supportedLanguages.map(language => language.languageTag);
 
 const plugins = [
   'gatsby-plugin-react-helmet',
@@ -14,15 +14,6 @@ const plugins = [
   'gatsby-plugin-emotion',
   'gatsby-plugin-remove-serviceworker',
   'gatsby-plugin-svgr',
-  {
-    resolve: 'gatsby-plugin-intl',
-    options: {
-      path: `${__dirname}/src/locales`,
-      languages,
-      defaultLanguage: 'en-us',
-      redirect: true,
-    },
-  },
   {
     resolve: 'gatsby-plugin-prefetch-google-fonts',
     options: {

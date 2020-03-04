@@ -6,8 +6,8 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { setIntlConfig, withIntl } from 'storybook-addon-intl';
 
 import { addLocaleData } from 'gatsby-plugin-intl';
-import enLocaleData from 'react-intl/locale-data/en';
-import esLocaleData from 'react-intl/locale-data/es';
+// import enLocaleData from 'react-intl/locale-data/en';
+// import esLocaleData from 'react-intl/locale-data/es';
 
 import { EmotionThemeProvider, GatsbyIntlProvider } from './decorators';
 import GlobalStyles from '../src/components/Layout/GlobalStyles';
@@ -57,29 +57,29 @@ addDecorator(EmotionThemeProvider);
 // Set supported locales
 export const locales = ['en-us', 'es-es'];
 
-// Import translation messages
-export const messages = locales.reduce((acc, locale) => {
-  return {
-    ...acc,
-    [locale]: require(`../src/locales/${locale}.json`),
-  };
-}, {});
+// // Import translation messages
+// export const messages = locales.reduce((acc, locale) => {
+//   return {
+//     ...acc,
+//     // [locale]: require(`../src/locales/${locale}.json`),
+//   };
+// }, {});
 
-const getMessages = locale => messages[locale];
+// const getMessages = locale => messages[locale];
+//
+// // Set `storybook-addon-intl` configuration (handles `react-intl`)
+// setIntlConfig({
+//   locales,
+//   defaultLocale: 'en-us',
+//   getMessages,
+// });
 
-// Set `storybook-addon-intl` configuration (handles `react-intl`)
-setIntlConfig({
-  locales,
-  defaultLocale: 'en-us',
-  getMessages,
-});
-
-// Load the locale data for all your supported locales
-addLocaleData(enLocaleData);
-addLocaleData(esLocaleData);
+// // Load the locale data for all your supported locales
+// addLocaleData(enLocaleData);
+// addLocaleData(esLocaleData);
 
 // Register decorators
 // Adds gatsby-plugin-intl IntlContextProvider which wraps the Gatsby Link component
-addDecorator(GatsbyIntlProvider);
-// Adds react-intl
-addDecorator(withIntl);
+// addDecorator(GatsbyIntlProvider);
+// // Adds react-intl
+// addDecorator(withIntl);
